@@ -18,10 +18,10 @@ With this information, anyone can verify the results.
 Our system is designed so no one—not even us—can predict or influence the winners. By sharing all the details, we make it possible for you to check the math and confirm the raffle is fair. Transparency is at the heart of what we do.
 
 
-Documentation of algorithm:
-Documentation of code:
+Documentation of algorithm: https://github.com/aces-dev/aces-raffle/blob/np/CODE_ARCHIRECTURE.md
+Documentation of code: https://github.com/aces-dev/aces-raffle/blob/np/ALGORITHM_ARCHITECTURE.md
 
-
+```
 ----- All Rights Reserved -----
 
 Copyright(c) 2025 - ACES Malawi
@@ -32,3 +32,4 @@ This code is provided for viewing purposes only. You are NOT permitted to:
 - Modify, distribute, or sublicense this code.
 
 Unauthorized use, copying, or distribution of this code without explicit written permission from the copyright holder is strictly prohibited and may result in legal action.
+```
