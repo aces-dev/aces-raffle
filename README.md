@@ -18,9 +18,9 @@ With this information, anyone can verify the results.
 Our system is designed so no one—not even us—can predict or influence the winners. By sharing all the details, we make it possible for you to check the math and confirm the raffle is fair. Transparency is at the heart of what we do.
 
 
-Documentation of algorithm: https://github.com/aces-dev/aces-raffle/blob/np/CODE_ARCHIRECTURE.md
+Documentation of code: https://github.com/aces-dev/aces-raffle/blob/np/CODE_ARCHIRECTURE.md
 
-Documentation of code: https://github.com/aces-dev/aces-raffle/blob/np/ALGORITHM_ARCHITECTURE.md
+Documentation of algorithm: https://github.com/aces-dev/aces-raffle/blob/np/ALGORITHM_ARCHITECTURE.md
 
 ```
 ----- All Rights Reserved -----
