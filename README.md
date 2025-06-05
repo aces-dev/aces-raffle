@@ -19,6 +19,7 @@ Our system is designed so no one—not even us—can predict or influence the wi
 
 
 Documentation of algorithm: https://github.com/aces-dev/aces-raffle/blob/np/CODE_ARCHIRECTURE.md
+
 Documentation of code: https://github.com/aces-dev/aces-raffle/blob/np/ALGORITHM_ARCHITECTURE.md
 
 ```
