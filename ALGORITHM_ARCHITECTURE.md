@@ -49,4 +49,5 @@ To ensure fair distribution when hash range doesn't divide evenly by ticket coun
 ### 4. Verification Phase
 
 After the raffle, we reveal the “master_seed”, “raffle_id”, and “nonce”. 
-So anyone can recompute raffle_seed = SHA256(master_seed + raffle_id + nonce), rebuild the hash chain, and validate all winners.
+So anyone can recompute 
+```raffle_seed = SHA256(master_seed + raffle_id + nonce)```, by rebuilding the hash chain, and validate all winners.
