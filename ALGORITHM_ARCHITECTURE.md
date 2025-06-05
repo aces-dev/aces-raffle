@@ -38,8 +38,9 @@ hash_chain[i] = SHA256(hash_chain[i-1]), starting with raffle_seed as hash_chain
 
 When a raffle closes, we generate the specific hash chain for that raffle and select winners.
 * Chain computation: The system computes hashes sequentially from raffle_seed to select winners
-* Map to winner: winning_ticket = int(hash, 16) % total_tickets 
-* or multi-winner raffles: repeat with next hash from chain, excluding already selected tickets* Ticket list is frozen when raffle closes, before any hash calculations begin
+* Map to winner: 
+``` winning_ticket = int(hash, 16) % total_tickets```
+* For multi-winner raffles: repeat with next hash from chain, excluding already selected tickets* Ticket list is frozen when raffle closes, before any hash calculations begin
 
 ### 3. Bias Prevention
 
