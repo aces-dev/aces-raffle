@@ -3,16 +3,16 @@ Architecture
 ```
 raffle-rng-system/
 ├── core/
-│   └── CryptoService.js          # Core cryptographic operations
+│   └── CryptoService.js             # Core cryptographic operations
 ├── services/
-│   ├── DatabaseService.js        # DB operations
-│   ├── CommitmentManager.js      # Commitment & secret revelation
-│   ├── RaffleExecutor.js         # Raffle execution logic
-│   └── VerificationService.js    # Verification results
+│   ├── DatabaseService.js           # DB operations
+│   ├── CommitmentManager.js         # Commitment & secret revelation
+│   ├── RaffleExecutor.js            # Raffle execution logic
+│   └── VerificationService.js       # Verification results
 ├── tests/
-│   ├── unit/                     # Unit tests
-│   └── integration/              # Integration tests
-├── RaffleRNGSystem.js           # Main orchestrator
+│   ├── unit/ - AlgorythmTests        
+│   └── integration/ - RaffleTestRunner
+├── RaffleRNGSystem.js              # Main orchestrator
 ├── package.json
 └── README.md
 ```
@@ -76,23 +76,22 @@ const RaffleRNGSystem = require('./RaffleRNGSystem');
 const raffleSystem = new RaffleRNGSystem();
 const raffleId = '';
 
-enum RafflePhase {
-  PreCommitment = 1,
-  Execute = 2,
-  RevealSecrets = 3,
-  Verify = 4
-}
+const RafflePhase = {
+  PreCommitment: 1,
+  Execute: 2,
+  RevealSecrets: 3,
+  Verify: 4
+};
 
 // Run individual phases
-await raffleSystem.executePhase(1, raffleId); // Pre-commitment
-await raffleSystem.executePhase(2, raffleId, 3); // Execute with 3 winners
-await raffleSystem.executePhase(3, raffleId); // Reveal secrets
-await raffleSystem.executePhase(4, raffleId); // Verify
+await raffleSystem.executePhase(RafflePhase.PreCommitment, raffleId);
+await raffleSystem.executePhase(RafflePhase.Execute, raffleId, 3); // Execute with 3 winners
+await raffleSystem.executePhase(RafflePhase.RevealSecrets, raffleId);
+await raffleSystem.executePhase(RafflePhase.Verify, raffleId);
 
 // Or run complete workflow
 const results = await raffleSystem.executeWorkflow(raffleId, 5);
 console.log(results);
-// Output: { 1: {...}, 2: {...}, 3: {...}, 4: {...} }
 
 // Check verification only
 const verification = await raffleSystem.executePhase(4, raffleId);
